@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Laba2.FactoryMetod
+{
+    /// <summary>
+    /// Стрипсы
+    /// </summary>
+    class StripsProduct : IProduct
+    {
+        public int Time = 0;
+        public int Cost = 0;
+        public int GetCost()
+        {
+            return Cost;
+        }
+
+        public int GetTime()
+        {
+            return Time;
+        }
+
+        public void SubtractTime(int value)
+        {
+            Time -= value;
+        }
+        public void SetInfo(int cost, int time)
+        {
+            Time = time;
+            Cost = cost;
+        }
+
+        public string GetName()
+        {
+            return "Стрипсы";
+        }
+    }
+}
